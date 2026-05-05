@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Acceso Confirmado!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f0f0f;
+            color: #e8e0d5;
+            min-height: 100vh;
+            padding-bottom: 80px;
+        }
+
+        /* ── Top Bar ── */
+        .top-bar {
+            background: #0f0f0f;
+            border-bottom: 1px solid #1e1e1e;
+            padding: 18px 20px;
+            text-align: center;
+        }
+        .top-bar-text {
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #c97b2a;
+        }
+
+        /* ── Hero ── */
+        .hero {
+            background: linear-gradient(160deg, #161616 0%, #1a1208 60%, #0f0f0f 100%);
+            padding: 70px 20px 60px;
+            text-align: center;
+            border-bottom: 1px solid #2a1f0e;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(201,123,42,0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(201,123,42,0.1);
+            border: 1px solid rgba(201,123,42,0.3);
+            color: #e09444;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            padding: 8px 20px;
+            border-radius: 50px;
+            margin-bottom: 32px;
+        }
+        .hero-eyebrow span { font-size: 14px; }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.4rem, 5vw, 3.8rem);
+            font-weight: 700;
+            line-height: 1.15;
+            color: #f5efe6;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+        .hero h1 em {
+            font-style: italic;
+            color: #e09444;
+        }
+        .hero-sub {
+            font-size: 17px;
+            color: #9a9080;
+            max-width: 520px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        /* ── Status Card ── */
+        .status-card {
+            background: rgba(201,123,42,0.06);
+            border: 1px solid rgba(201,123,42,0.2);
+            border-radius: 16px;
+            padding: 28px 32px;
+            max-width: 560px;
+            margin: 0 auto 44px;
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            text-align: left;
+        }
+        .status-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, #c97b2a, #e09444);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 18px;
+        }
+        .status-card-title {
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #e09444;
+            margin-bottom: 6px;
+        }
+        .status-card-text {
+            font-size: 15px;
+            color: #b8a898;
+            line-height: 1.6;
+        }
+        .status-card-text strong { color: #f0e8dc; font-weight: 600; }
+
+        /* ── CTA Button ── */
+        .cta-wrap { text-align: center; margin-bottom: 16px; }
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #c97b2a 0%, #e09444 50%, #c97b2a 100%);
+            background-size: 200% auto;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            padding: 20px 52px;
+            border-radius: 8px;
+            transition: background-position 0.5s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 24px rgba(201,123,42,0.35);
+            text-transform: uppercase;
+        }
+        .cta-btn:hover {
+            background-position: right center;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(201,123,42,0.5);
+        }
+        .cta-hint {
+            font-size: 12px;
+            color: #5a5048;
+            margin-top: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        /* ── Info Section ── */
+        .info-section {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 60px 20px 0;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 56px;
+        }
+        .info-card {
+            background: #141414;
+            border: 1px solid #222;
+            border-radius: 12px;
+            padding: 24px 20px;
+            text-align: center;
+            transition: border-color 0.3s ease;
+        }
+        .info-card:hover { border-color: rgba(201,123,42,0.3); }
+        .info-card-icon { font-size: 24px; margin-bottom: 12px; }
+        .info-card-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: #f0e8dc;
+            margin-bottom: 8px;
+            letter-spacing: 0.3px;
+        }
+        .info-card-text { font-size: 12px; color: #6a6058; line-height: 1.6; }
+
+        /* ── Divider ── */
+        .section-divider {
+            border: none;
+            border-top: 1px solid #1e1e1e;
+            margin: 0 0 56px;
+        }
+
+        /* ── Guarantee ── */
+        .guarantee-section {
+            background: #111;
+            border: 1px solid #1e1e1e;
+            border-radius: 16px;
+            padding: 36px 32px;
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            margin-bottom: 56px;
+        }
+        .guarantee-img {
+            width: 110px;
+            height: 110px;
+            object-fit: contain;
+            flex-shrink: 0;
+            opacity: 0.95;
+        }
+        .guarantee-text h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #f0e8dc;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        .guarantee-text p {
+            font-size: 14px;
+            color: #7a7068;
+            line-height: 1.75;
+        }
+        .guarantee-badge {
+            display: inline-block;
+            background: rgba(201,123,42,0.1);
+            border: 1px solid rgba(201,123,42,0.25);
+            color: #c97b2a;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 50px;
+            margin-bottom: 12px;
+        }
+
+        /* ── Footer ── */
+        footer {
+            background: #0a0a0a;
+            border-top: 1px solid #1a1a1a;
+            padding: 24px 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 10;
+        }
+        .footer-copy {
+            font-size: 11px;
+            color: #3a3530;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+        .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .footer-links a {
+            font-size: 11px;
+            color: #4a4540;
+            text-decoration: none;
+            letter-spacing: 0.3px;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover { color: #c97b2a; }
+
+        /* ── Responsive ── */
+        @media (max-width: 640px) {
+            .hero { padding: 50px 20px 44px; }
+            .status-card { flex-direction: column; gap: 14px; }
+            .info-grid { grid-template-columns: 1fr; }
+            .guarantee-section { flex-direction: column; text-align: center; }
+            .cta-btn { font-size: 14px; padding: 18px 36px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar-text">✦ &nbsp; Compra confirmada &nbsp; ✦ &nbsp; Acceso activado &nbsp; ✦</div>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero">
+        <div class="hero-eyebrow"><span>✓</span> Pago procesado con éxito</div>
+        <h1>Tu inversión en ti mismo<br>acaba de <em>dar sus frutos.</em></h1>
+        <p class="hero-sub">
+            Bienvenido al otro lado. Tu acceso está listo y esperándote.
+            Todo lo que necesitas para transformar tu metabolismo está a un clic de distancia.
+        </p>
+
+        <!-- Status Card -->
+        <div class="status-card">
+            <div class="status-icon">📋</div>
+            <div>
+                <div class="status-card-title">Información de tu compra</div>
+                <div class="status-card-text">
+                    Tu extracto bancario mostrará un cargo de <strong>DigiStore24</strong>.
+                    Si tienes alguna pregunta, nuestro equipo está disponible
+                    <strong>24/7</strong> en
+                    <strong>supportcustomer99@gmail.com</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-wrap">
+            <a href="https://drive.google.com/drive/folders/1AclYd-XIYFDUB8XbdZXhHP9Now24BBUs?usp=sharing"
+               target="_blank" class="cta-btn">
+                Acceder a mi producto ahora →
+            </a>
+            <p class="cta-hint">Acceso inmediato · Sin esperas · Disponible para siempre</p>
+        </div>
+    </div>
+
+    <!-- Info Section -->
+    <div class="info-section">
+
+        <!-- 3 Cards -->
+        <div class="info-grid">
+            <div class="info-card">
+                <div class="info-card-icon">⚡</div>
+                <div class="info-card-title">Acceso Inmediato</div>
+                <div class="info-card-text">Tu producto ya está disponible. Haz clic en el botón de arriba para acceder ahora mismo.</div>
+            </div>
+            <div class="info-card">
+                <div class="info-card-icon">🔒</div>
+                <div class="info-card-title">Compra Segura</div>
+                <div class="info-card-text">Tu transacción fue procesada de forma segura. Recibirás un correo de confirmación en breve.</div>
+            </div>
+            <div class="info-card">
+                <div class="info-card-icon">💬</div>
+                <div class="info-card-title">Soporte 24/7</div>
+                <div class="info-card-text">¿Alguna duda? Estamos aquí para ayudarte en todo momento. Escríbenos cuando lo necesites.</div>
+            </div>
+        </div>
+
+        <hr class="section-divider">
+
+        <!-- Guarantee -->
+        <div class="guarantee-section">
+            <img src="images/garantia.webp" alt="Garantía de satisfacción" class="guarantee-img">
+            <div class="guarantee-text">
+                <div class="guarantee-badge">Sin riesgo</div>
+                <h2>Garantía Total de 60 Días —<br>100% de Satisfacción o te devolvemos tu dinero</h2>
+                <p>
+                    Tienes 60 días hábiles desde la fecha de compra para probarlo sin ningún riesgo.
+                    Si por algún motivo no estás completamente satisfecho con los resultados,
+                    escríbenos y gestionaremos tu reembolso completo en menos de 48 horas.
+                    Sin preguntas, sin complicaciones.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p class="footer-copy">© 2026 — Todos los derechos reservados</p>
+        <div class="footer-links">
+            <a href="https://gemaacademy.online/privac" target="_blank">Política de Privacidad</a>
+            <a href="https://gemaacademy.online/terminos" target="_blank">Términos y Condiciones</a>
+            <a href="https://gemaacademy.online/contact" target="_blank">Contáctenos</a>
+            <a href="https://gemaacademy.online/responsabilidad" target="_blank">Aviso Legal</a>
+        </div>
+    </footer>
+
+</body>
+</html>
