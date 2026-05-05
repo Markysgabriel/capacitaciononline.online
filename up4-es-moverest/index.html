@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="es" dir="ltr">
+    <head>
+        <title>MoveRest Protocol - Ejercicio y Sueño para Pérdida de Peso</title>
+        <meta name="robots" content="index, follow" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+        <meta name="description" content="Guía educativa sobre cómo sincronizar el ejercicio con tu ciclo de sueño para maximizar la quema de grasa y el rendimiento metabólico" />
+        <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+        <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.yourmindhealthguide.site/moverest" />
+        <meta property="og:image" content="images/ogimage.png" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet" />
+        <style type="text/css" media="all">
+            * { margin: 0; padding: 0; box-sizing: border-box; }
+            html { scroll-behavior: smooth; }
+            body {
+                font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+                -webkit-font-smoothing: antialiased;
+                background: #fafafa;
+                color: #1a1a1a;
+                line-height: 1.6;
+            }
+
+            /* ── Header ── */
+            .header-bar {
+                background: #fff;
+                padding: 20px 0;
+                border-bottom: 1px solid #e5e5e5;
+                position: sticky;
+                top: 0;
+                z-index: 100;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            }
+            .header-content {
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 0 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .logo-text {
+                font-family: Merriweather, serif;
+                font-size: 20px;
+                font-weight: 700;
+                color: #b45309;
+                letter-spacing: -0.5px;
+            }
+            .header-badge {
+                background: #fef3c7;
+                color: #b45309;
+                padding: 6px 14px;
+                border-radius: 20px;
+                font-size: 13px;
+                font-weight: 600;
+            }
+
+            /* ── Main Wrapper ── */
+            .main-wrapper {
+                max-width: 680px;
+                margin: 0 auto;
+                padding: 60px 20px;
+                background: #fff;
+            }
+            .intro-badge {
+                display: inline-block;
+                background: linear-gradient(135deg, #f59e0b 0%, #b45309 100%);
+                color: #fff;
+                padding: 8px 18px;
+                border-radius: 6px;
+                font-size: 12px;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                margin-bottom: 24px;
+            }
+            h1 {
+                font-family: Merriweather, serif;
+                font-size: 42px;
+                font-weight: 700;
+                line-height: 1.2;
+                color: #0d1b2a;
+                margin-bottom: 20px;
+            }
+            .lead-text {
+                font-size: 19px;
+                line-height: 1.7;
+                color: #374151;
+                margin-bottom: 28px;
+            }
+            .divider {
+                width: 60px;
+                height: 4px;
+                background: linear-gradient(90deg, #f59e0b, #b45309);
+                border-radius: 2px;
+                margin: 40px 0;
+            }
+            h2 {
+                font-family: Merriweather, serif;
+                font-size: 28px;
+                font-weight: 700;
+                color: #0d1b2a;
+                margin: 48px 0 20px 0;
+                line-height: 1.3;
+            }
+            p {
+                margin-bottom: 18px;
+                color: #374151;
+                font-size: 17px;
+            }
+
+            /* ── Insight Box ── */
+            .insight-box {
+                background: #fffbeb;
+                border-left: 4px solid #f59e0b;
+                padding: 24px;
+                margin: 32px 0;
+                border-radius: 0 8px 8px 0;
+            }
+            .insight-box p {
+                margin-bottom: 0;
+                color: #78350f;
+                font-size: 16px;
+                line-height: 1.7;
+            }
+            .insight-box strong { color: #b45309; font-weight: 700; }
+
+            /* ── Warning Box ── */
+            .warning-box {
+                background: #fff7ed;
+                border-left: 4px solid #ea580c;
+                padding: 20px;
+                margin: 24px 0;
+                border-radius: 0 8px 8px 0;
+            }
+            .warning-box p {
+                margin-bottom: 0;
+                color: #9a3412;
+                font-size: 15px;
+                line-height: 1.6;
+            }
+            .warning-box strong { color: #c2410c; font-weight: 700; }
+
+            /* ── Checklists ── */
+            .checklist { list-style: none; margin: 24px 0; }
+            .checklist li {
+                padding: 12px 0 12px 36px;
+                position: relative;
+                color: #374151;
+                font-size: 17px;
+                border-bottom: 1px solid #f3f4f6;
+            }
+            .checklist li:last-child { border-bottom: none; }
+            .checklist li:before {
+                content: "✓";
+                position: absolute;
+                left: 0;
+                color: #f59e0b;
+                font-weight: 700;
+                font-size: 20px;
+            }
+
+            /* ── Problem List ── */
+            .x-list { list-style: none; margin: 24px 0; }
+            .x-list li {
+                padding: 12px 0 12px 36px;
+                position: relative;
+                color: #374151;
+                font-size: 17px;
+            }
+            .x-list li:before {
+                content: "✗";
+                position: absolute;
+                left: 0;
+                color: #dc2626;
+                font-weight: 700;
+                font-size: 20px;
+            }
+
+            /* ── Stat Box ── */
+            .stat-box {
+                background: #fef3c7;
+                border-left: 4px solid #f59e0b;
+                padding: 20px;
+                margin: 24px 0;
+                border-radius: 0 8px 8px 0;
+            }
+            .stat-number {
+                font-size: 36px;
+                font-weight: 800;
+                color: #b45309;
+                line-height: 1;
+                margin-bottom: 8px;
+            }
+            .stat-text { color: #78350f; font-size: 15px; line-height: 1.6; }
+
+            /* ── Module Cards ── */
+            .modules-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+                margin: 28px 0;
+            }
+            .module-card {
+                background: #fff;
+                border: 1px solid #e5e7eb;
+                border-radius: 10px;
+                padding: 20px;
+                border-top: 3px solid #f59e0b;
+            }
+            .module-number {
+                font-size: 12px;
+                font-weight: 700;
+                color: #f59e0b;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-bottom: 8px;
+            }
+            .module-title {
+                font-family: Merriweather, serif;
+                font-size: 15px;
+                font-weight: 700;
+                color: #0d1b2a;
+                margin-bottom: 8px;
+                line-height: 1.3;
+            }
+            .module-desc {
+                font-size: 13px;
+                color: #6b7280;
+                line-height: 1.5;
+                margin: 0;
+            }
+
+            /* ── Product Showcase ── */
+            .product-showcase {
+                background: linear-gradient(135deg, #b45309 0%, #78350f 100%);
+                padding: 60px 0;
+                margin: 60px -20px 40px -20px;
+                text-align: center;
+                color: #fff;
+            }
+            .product-showcase h2 {
+                color: #fff;
+                margin-top: 0;
+                font-size: 32px;
+            }
+            .product-image-container {
+                max-width: 280px;
+                margin: 40px auto;
+                position: relative;
+            }
+            .product-image {
+                width: 100%;
+                height: auto;
+                border-radius: 12px;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            }
+            .guarantee-seal { max-width: 120px; margin: 20px auto; opacity: 0.95; }
+            .guarantee-seal img { width: 100%; height: auto; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.15)); }
+            .price-section { margin: 32px 0; }
+            .price-label { font-size: 14px; text-transform: uppercase; letter-spacing: 1px; opacity: 0.9; margin-bottom: 8px; }
+            .price-amount { font-size: 56px; font-weight: 800; line-height: 1; margin-bottom: 8px; }
+            .price-detail { font-size: 15px; opacity: 0.85; }
+            .cta-button {
+                display: inline-block;
+                background: #fff;
+                color: #b45309;
+                padding: 18px 48px;
+                border-radius: 8px;
+                font-size: 18px;
+                font-weight: 700;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+                margin: 20px 0;
+            }
+            .cta-button:hover { transform: translateY(-2px); box-shadow: 0 6px 30px rgba(0,0,0,0.3); }
+            .decline-link {
+                display: block;
+                margin-top: 32px;
+                color: rgba(255,255,255,0.7);
+                font-size: 14px;
+                text-decoration: none;
+                transition: color 0.3s ease;
+            }
+            .decline-link:hover { color: rgba(255,255,255,0.9); }
+
+            /* ── Footer ── */
+            .footer-links {
+                text-align: center;
+                padding: 40px 20px 20px 20px;
+                border-top: 1px solid #e5e5e5;
+                margin-top: 60px;
+            }
+            .footer-links a {
+                color: #6b7280;
+                text-decoration: none;
+                margin: 0 15px;
+                font-size: 13px;
+                transition: color 0.3s ease;
+            }
+            .footer-links a:hover { color: #b45309; }
+
+            /* ── Disclaimer ── */
+            .disclaimer-section {
+                background: #f9fafb;
+                padding: 40px 20px;
+                margin: 60px -20px 0 -20px;
+                border-top: 1px solid #e5e5e5;
+            }
+            .disclaimer-content { max-width: 640px; margin: 0 auto; }
+            .disclaimer-title {
+                font-size: 12px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                color: #6b7280;
+                margin-bottom: 16px;
+                font-weight: 600;
+            }
+            .disclaimer-text { font-size: 13px; line-height: 1.8; color: #6b7280; margin-bottom: 12px; }
+
+            /* ── Responsive ── */
+            @media (max-width: 768px) {
+                h1 { font-size: 32px; }
+                h2 { font-size: 24px; }
+                .lead-text { font-size: 17px; }
+                .price-amount { font-size: 48px; }
+                .main-wrapper { padding: 40px 16px; }
+                .modules-grid { grid-template-columns: 1fr; }
+                .product-showcase { margin-left: -16px; margin-right: -16px; padding: 40px 16px; }
+                .disclaimer-section { margin-left: -16px; margin-right: -16px; }
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- Encabezado -->
+        <div class="header-bar">
+            <div class="header-content">
+                <div class="logo-text">MoveRest</div>
+                <div class="header-badge">Oferta Especial</div>
+            </div>
+        </div>
+
+        <!-- Contenido Principal -->
+        <div class="main-wrapper">
+
+            <span class="intro-badge">El Último Multiplicador</span>
+            <h1>Ejercítate Mejor Durmiendo Mejor — La Combinación Que Triplica Tus Resultados</h1>
+            <p class="lead-text">
+                Ya sabes cómo optimizar tu sueño para perder grasa. Ahora descubre cómo
+                sincronizar tu ejercicio con tu ciclo de sueño para multiplicar cada
+                entrenamiento, recuperarte más rápido y quemar hasta un 40% más de grasa.
+            </p>
+            <div class="divider"></div>
+
+            <!-- El Problema -->
+            <h2>El Error Que Casi Todo el Mundo Comete</h2>
+            <p>
+                La mayoría de las personas trata el ejercicio y el sueño como dos cosas
+                separadas. Se esfuerzan en el gimnasio y también intentan dormir bien,
+                pero nunca conectan los dos. Ese es el error que les cuesta resultados.
+            </p>
+            <ul class="x-list">
+                <li>Entrenan a la hora equivocada y sabotean sus hormonas del sueño</li>
+                <li>Se recuperan mal porque duermen con cortisol elevado post-entreno</li>
+                <li>Pierden músculo de noche porque ignoran la ventana anabólica del sueño</li>
+                <li>Llegan al plateau porque el ejercicio y el metabolismo nocturno no están sincronizados</li>
+            </ul>
+            <div class="insight-box">
+                <p>
+                    <strong>Lo que la investigación muestra:</strong> El momento en que haces
+                    ejercicio afecta directamente la calidad de tu sueño profundo, la
+                    liberación de hormona de crecimiento nocturna y la oxidación de grasa
+                    durante las próximas 8 horas. Entrenar a la hora correcta puede aumentar
+                    la quema de grasa nocturna en hasta un 40%.
+                </p>
+            </div>
+
+            <!-- La Solución -->
+            <h2>La Diferencia MoveRest</h2>
+            <p>
+                <strong>MoveRest Protocol</strong> es la guía educativa que cierra el círculo
+                de tu sistema de pérdida de peso. Mientras LeanRest Formula optimizó tus
+                hormonas del sueño, SlimRest Protocol profundizó en la ciencia metabólica,
+                MetaboBoost Accelerator te dio las estrategias avanzadas y DreamLean te enseñó
+                a mantener los resultados para siempre...
+            </p>
+            <p>
+                MoveRest Protocol te enseña <strong>cuándo, cómo y con qué intensidad
+                ejercitarte</strong> para que cada entrenamiento potencie tu sueño, y cada
+                noche de sueño potencie tu próximo entrenamiento. Es el multiplicador final.
+            </p>
+
+            <div class="stat-box">
+                <div class="stat-number">3×</div>
+                <div class="stat-text">
+                    más pérdida de grasa reportada cuando el ejercicio está sincronizado
+                    con el ritmo circadiano, comparado con el ejercicio a destiempo
+                </div>
+            </div>
+
+            <!-- Qué aprenderás -->
+            <h2>Qué Aprenderás</h2>
+            <p>
+                Esta guía educativa cubre 8 módulos completos basados en investigación
+                científica sobre la conexión ejercicio-sueño-metabolismo:
+            </p>
+
+            <div class="modules-grid">
+                <div class="module-card">
+                    <div class="module-number">Módulo 1</div>
+                    <div class="module-title">Cronobiología del Ejercicio</div>
+                    <p class="module-desc">La ciencia de cuándo entrenar según tu ritmo circadiano para maximizar quema de grasa</p>
+                </div>
+                <div class="module-card">
+                    <div class="module-number">Módulo 2</div>
+                    <div class="module-title">La Ventana Anabólica Nocturna</div>
+                    <p class="module-desc">Cómo usar el sueño profundo para reparar músculo y activar la lipolisis durante la noche</p>
+                </div>
+                <div class="module-card">
+                    <div class="module-number">Módulo 3</div>
+                    <div class="module-title">Cortisol y Entrenamiento</div>
+                    <p class="module-desc">Protocolos para entrenar sin elevar el cortisol nocturno que sabotea tu sueño y acumula grasa abdominal</p>
+                </div>
+                <div class="module-card">
+                    <div class="module-number">Módulo 4</div>
+                    <div class="module-title">Recuperación Activa y Sueño</div>
+                    <p class="module-desc">Rutinas de recuperación que potencian las fases de sueño profundo y hormona de crecimiento</p>
+                </div>
+                <div class="module-card">
+                    <div class="module-number">Módulo 5</div>
+                    <div class="module-title">Ejercicio para Diferentes Cronotipos</div>
+                    <p class="module-desc">Estrategias específicas para "alondras" (mañaneros), "búhos" (nocturnos) y tipos intermedios</p>
+                </div>
+                <div class="module-card">
+                    <div class="module-number">Módulo 6</div>
+                    <div class="module-title">Nutrición Pre y Post Entreno</div>
+                    <p class="module-desc">Qué comer y cuándo para sincronizar el metabolismo del ejercicio con el ciclo metabólico nocturno</p>
+                </div>
+                <div class="module-card">
+                    <div class="module-number">Módulo 7</div>
+                    <div class="module-title">Protocolo Anti-Plateau</div>
+                    <p class="module-desc">Cómo variar el entrenamiento para evitar la adaptación metabólica usando señales del sueño</p>
+                </div>
+                <div class="module-card">
+                    <div class="module-number">Módulo 8</div>
+                    <div class="module-title">Plan de 12 Semanas</div>
+                    <p class="module-desc">Tu hoja de ruta completa con cronograma de entrenamientos sincronizado con el ciclo sueño-metabolismo</p>
+                </div>
+            </div>
+
+            <div class="insight-box">
+                <p>
+                    <strong>Solo contenido educativo.</strong> Los resultados individuales
+                    varían significativamente. Esta guía NO prescribe rutinas médicas de
+                    ejercicio ni diagnostica condiciones de salud. Consulta siempre a un
+                    profesional de la salud o entrenador certificado antes de iniciar
+                    cualquier programa de actividad física.
+                </p>
+            </div>
+
+            <!-- Para quién es -->
+            <h2>Para Quién Es Este Protocolo</h2>
+            <ul class="checklist">
+                <li>Ya estás aplicando estrategias de optimización del sueño</li>
+                <li>Haces ejercicio pero no ves los resultados que esperas</li>
+                <li>Sientes que te recuperas lento después de entrenar</li>
+                <li>Quieres maximizar cada hora de entrenamiento sin hacer más</li>
+                <li>Buscas el sistema completo que conecte sueño, metabolismo y movimiento</li>
+                <li>Quieres dejar de adivinar y tener un plan basado en ciencia</li>
+            </ul>
+
+            <p style="margin-top: 32px">
+                <strong>Este es el último eslabón.</strong> Con MoveRest Protocol, tu sistema
+                LeanRest + SlimRest + MetaboBoost + DreamLean + MoveRest estará completo.
+                Cada pieza trabajando en sinergia, 24 horas al día.
+            </p>
+
+        </div><!-- /main-wrapper -->
+
+        <!-- Presentación del Producto -->
+        <div class="product-showcase">
+            <h2>MoveRest Protocol</h2>
+            <p style="font-size: 18px; opacity: 0.95; max-width: 500px; margin: 16px auto">
+                La guía educativa que sincroniza tu ejercicio con tu sueño para triplicar
+                la quema de grasa y acelerar la recuperación
+            </p>
+            <div class="product-image-container">
+                <img src="images/moverest-cover.png" alt="MoveRest Protocol" class="product-image" />
+            </div>
+            <div class="guarantee-seal">
+                <img src="images/selo_uqr6kx.png" alt="Garantía de Devolución de 60 Días" />
+            </div>
+            <div class="price-section">
+                <div class="price-label">Inversión Única</div>
+                <div class="price-amount">$29</div>
+                <div class="price-detail">Guía completa con plan de 12 semanas + acceso de por vida</div>
+            </div>
+            <a href="https://hotmart.com" class="cta-button">Sí, Quiero el Protocolo Completo →</a>
+            <a href="https://hotmart.com" class="decline-link">No gracias, prefiero seguir entrenando sin sincronizar con mi sueño</a>
+        </div>
+
+        <!-- Pie de Página -->
+        <div class="footer-links">
+            <a href="https://www.dailybodyandmind.site/terms-nhb" target="_blank">Términos de Servicio</a>
+            <a href="https://www.dailybodyandmind.site/privacy-nhb" target="_blank">Política de Privacidad</a>
+        </div>
+
+        <!-- Aviso Legal -->
+        <div class="disclaimer-section">
+            <div class="disclaimer-content">
+                <div class="disclaimer-title">Aviso Legal Importante</div>
+                <p class="disclaimer-text">
+                    <strong>Solo Contenido Educativo:</strong> MoveRest Protocol proporciona
+                    información educativa sobre la relación entre el ejercicio físico, el sueño
+                    y el metabolismo basada en investigaciones científicas. Esta guía NO
+                    diagnostica, trata, cura ni previene ninguna condición médica, incluyendo
+                    obesidad, trastornos metabólicos, lesiones o cualquier enfermedad.
+                </p>
+                <p class="disclaimer-text">
+                    <strong>No Es Prescripción de Ejercicio:</strong> Este material NO
+                    constituye un programa médico de ejercicio ni asesoramiento de un
+                    entrenador certificado. Antes de iniciar cualquier programa de actividad
+                    física, consulta a un médico o profesional de la salud calificado,
+                    especialmente si tienes condiciones cardiovasculares, musculoesqueléticas,
+                    metabólicas u otras condiciones de salud.
+                </p>
+                <p class="disclaimer-text">
+                    <strong>Resultados Individuales:</strong> Los resultados varían
+                    significativa e impredeciblemente según el nivel de condición física,
+                    genética, historial médico, medicamentos, edad, sexo, dieta y muchos otros
+                    factores. NO se garantizan, prometen ni implican resultados específicos de
+                    pérdida de peso, rendimiento físico o mejoras metabólicas.
+                </p>
+                <p class="disclaimer-text">
+                    <strong>No Apropiado Para:</strong> Este material no es apropiado para
+                    personas con trastornos alimentarios, lesiones activas, embarazadas o en
+                    período de lactancia, menores de 18 años, ni para quienes tengan
+                    condiciones médicas que contraindiquen el ejercicio sin autorización médica
+                    expresa.
+                </p>
+                <p class="disclaimer-text">
+                    <strong>Uso Previsto:</strong> Este material educativo está destinado a
+                    informar posibles conversaciones con profesionales de la salud y
+                    entrenadores certificados — NO para reemplazar la orientación profesional
+                    individualizada. Siempre prioriza la seguridad y la atención médica
+                    basada en evidencia.
+                </p>
+                <p class="disclaimer-text">
+                    © 2025 MoveRest Protocol. Todos los derechos reservados. Solo para fines
+                    educativos.
+                </p>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="js/latest.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" async="" defer="defer"></script>
+        <script src="js/hotmart.js"></script>
+        <script>hotmartUpsell();</script>
+        <script src="js/atomicpixel.js"></script>
+        <script src="js/a.js"></script>
+        <script type="text/javascript" defer="defer">
+            document.body.appendChild(Object.assign(document.createElement("script"), {
+                src: "https://cdn.atomicatpages.net/cdn/a.js?cache=" + Date.now(),
+                async: true, defer: true
+            }));
+        </script>
+        <script type="text/javascript" defer="defer">
+            document.body.appendChild(Object.assign(document.createElement("script"), {
+                src: "https://cdn.atomicatpages.net/cdn/atomicpixel.js?cache=" + Date.now(),
+                async: true, defer: true
+            }));
+        </script>
+
+    </body>
+</html>
